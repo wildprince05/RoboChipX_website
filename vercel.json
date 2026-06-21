@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/public/index.html" },
+    { "source": "/registration", "destination": "/public/registration.html" },
+    { "source": "/payment", "destination": "/public/payment.html" }
+  ],
+  "headers": [
+    {
+      "source": "/src/js/(.*)\\.js",
+      "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
+    }
+  ]
+}

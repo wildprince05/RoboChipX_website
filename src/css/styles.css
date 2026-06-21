@@ -900,6 +900,11 @@ section {
   font-weight: 500;
 }
 
+.venue-map-btn {
+  display: inline-flex;
+  margin-top: 2rem;
+}
+
 .radar-container {
   display: flex;
   justify-content: center;
