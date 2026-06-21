@@ -183,9 +183,10 @@ function initMobileNav() {
   });
 }
 
-// Email validator — requires local@domain.tld with letters-only TLD (2+ chars)
+// Email validator — requires local@domain.tld, supports multi-level domains
+// (e.g. user@gmail.com, user@college.edu.in, user@company.co.in)
 function isValidEmail(email) {
-  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.([a-zA-Z]{2,})$/.test(email.trim());
+  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/.test(email.trim());
 }
 
 // Show / clear inline form error
@@ -220,7 +221,7 @@ async function initRegistration() {
 
     // Client-side validation
     if (!isValidEmail(leaderEmail)) {
-      showFormError('Please enter a valid email address (e.g. user@gmail.com).'); return;
+      showFormError('Please enter a valid email address (e.g. name@yourdomain.com).'); return;
     }
     if (!/^[6-9][0-9]{9}$/.test(mobile)) {
       showFormError('Please enter a valid 10-digit Indian mobile number.'); return;
