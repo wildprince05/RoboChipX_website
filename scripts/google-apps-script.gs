@@ -8,7 +8,7 @@
 // fetch() endpoint inside initRegistration().
 // ─────────────────────────────────────────────────────────────────────────────
 
-var PAYMENT_URL   = 'https://YOUR-VERCEL-DOMAIN.vercel.app/payment.html';
+var PAYMENT_URL   = 'https://robochipx-one.vercel.app/payment.html';
 var SHEET_NAME    = 'Registrations';   // tab name inside your Google Sheet
 var SENDER_NAME   = 'ROBOCHIPX 2026';
 
